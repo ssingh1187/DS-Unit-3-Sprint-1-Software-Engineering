@@ -19,6 +19,7 @@ We're going to start our own Python package the right way - by making an
 environment with `pipenv`, installing our dependencies, and making some classes.
 
 ## Assignment
+Link for Lambdata repo: https://github.com/ssingh1187/lambdata
 
 1) Create your own `lambdata-yourusername` package, as shown in lecture
 2) Implement at least 2 of the following "helper" utility functions:
