@@ -30,25 +30,31 @@ class AcmeProductTests(unittest.TestCase):
  
 
 
-class AcmeReportTests:
+class AcmeReportTests(unittest.TestCase):
     def test_default_num_products(self):
         '''
         checks that it really does receive a list of length 30
         '''
-        names = generate_products
+        names = generate_products()
         self.assertEqual(len(names), 30)
 
-    #-------(Will come back to this later)---------
-    # def test_legal_names(self):
-    #     '''
-    #     checks that the generated names for a default batch of products
-    #      are all valid possible names to generate 
-    #      (adjective, space, noun, from the lists of possible words)
-    #      [assertIn(a, b) --- a in b]
-    #     '''
+    def test_legal_names(self):
+        '''
+        checks that the generated names for a default batch of products
+         are all valid possible names to generate 
+         (adjective, space, noun, from the lists of possible words)
+         [assertIn(a, b) --- a in b]
+        '''
+        # Splits at space :text.split() Will test the presence of space between words
+        
+        names = generate_products() 
 
-    #     names = generate_products
-    #     self.assertIn(names)
+        for product in names:
+            name = product.name
+            words = name.split(' ')
+
+            self.assertIn(words[0], ADJECTIVES)
+            self.assertIn(words[1], NOUNS)
         
 
 if __name__ == '__main__':

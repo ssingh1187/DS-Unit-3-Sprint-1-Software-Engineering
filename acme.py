@@ -51,24 +51,24 @@ class Product:
              return('...BABOOM!!')
 
         
-# class BoxingGlove(Product):
-#     def __init__(self, name=None, price=10, weight=10, flammability=0.5,
-#                          identifier=random.randint(1000000, 10000000)):
-#         super().__init__(name=name, price=price, weight=weight, flammability=flammability,identifier=identifier)
+class BoxingGlove(Product):
+    def __init__(self, name=None, price=10, weight=10, flammability=0.5,
+                         identifier=random.randint(1000000, 10000000)):
+        super().__init__(name=name, price=price, weight=weight, flammability=flammability,identifier=identifier)
 
-#     def explode(self):
-#         explode = self.flammability * self.weight
-#         if explode < 10:
-#             return('...its a glove.')
-#         elif explode >= 10 and Product < 50:
-#             return('...its a glove.')
-#         else:
-#             return('...its a glove.')
+    def explode(self):
+        explode = self.flammability * self.weight
+        if explode < 10:
+            return('...its a glove.')
+        elif explode >= 10 and Product < 50:
+            return('...its a glove.')
+        else:
+            return('...its a glove.')
 
-#     def punch(self):
-#         if self.weight < 5:
-#             return('That tickles.')
-#         elif self.weight >= 5 and self.weight < 15:
-#             return('Hey that hurt!')
-#         else:
-#             return('OUCH!')
+    def punch(self):
+        if self.weight < 5:
+            return('That tickles.')
+        elif self.weight >= 5 and self.weight < 15:
+            return('Hey that hurt!')
+        else:
+            return('OUCH!')
