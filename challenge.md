@@ -264,9 +264,11 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+Ans: Codes should be reviewed with proper comments and explanations. Comments should be written in simple language and in a manner that is easy for the coder to understand. Being respectful is very important and harsh comments should be avoided. Testing the functionality of the code is another very important factor that should be kept in mind while reviewing a code. A code should function as it is expected to, and a reviewer should make sure of that.
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
+Ans: Containers are important to make sure that the software runs without any obstacle if there is a need to switch environments. Containers are also faster and requires less space making it more efficient than virtual systems. It is also possible to select certain containers for a particular purpose, which will help in reducing computing time by running only the required container.
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 
