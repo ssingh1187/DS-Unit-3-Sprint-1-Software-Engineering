@@ -6,45 +6,46 @@ import numpy
 ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
 NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 
-print('ACME CORPORATION OFFICIAL INVENTORY REPORT')
 def generate_products(num_products=30):
     '''
     should generate a given number of products (default 30), randomly, and return them as a list
     '''
     products = []
 
-    for product in list(range(num_products)):
-        product = Product(name=' '.join(sample(ADJECTIVES, k=1) + sample(NOUNS, k=1)))
-        products.append(product)
+    for i in range(num_products):
+        prod_name = ' '.join(sample(ADJECTIVES, k=1) + sample(NOUNS, k=1))
+        price = randint(5, 100)
+        weight = randint(5, 100)
+        flammability = uniform (0.0, 0.25)
 
-    
+        products.append(Product(prod_name, price, weight, flammability))
     return products
+
 
 
 def inventory_report(products):
     '''
     takes a list of products, and prints a "nice" summary
     '''
-    unique_products = set(products)
-    print('unique_products = ', len(unique_products))
-
-
+    
+    prices = []
     for product in products:
-        print ('Product Name:', product.name)
-        prices = []
-        for price in list(range(randint(5, 100))):
-            prices.append(price)
-        print ('Average Price:', sum(prices)/len(prices))
+        prices.append(product.price)
+        
+    weights = []
+    for weight in products:
+        weights.append(product.weight)
 
-        weights = []
-        for weight in list(range(randint(5,100))):
-            weights.append(weight)
-        print ('Average Weight:', sum(weights)/len(weights))
+    flammabilities = []
+    for flammability in products:
+        flammabilities.append(product.flammability)
 
-        flammabilities = []
-        for flammability in list(numpy.arange(uniform(0.0,2.5))):
-            flammabilities.append(flammability)
-        print ('Average Flammability:', sum(flammabilities)/len(flammabilities))
+    print ('ACME CORPORATION OFFICIAL INVENTORY REPORT')
+    print('unique_products = ', len(set(products)))
+    print ('Average Price:', sum(prices)/len(prices))
+    print ('Average Weight:', sum(weights)/len(weights))
+    print ('Average Flammability:', sum(flammabilities)/len(flammabilities))
+
 
 
 

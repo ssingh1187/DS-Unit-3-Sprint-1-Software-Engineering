@@ -19,7 +19,6 @@ class Product:
         self.weight = weight
         self.flammability = flammability
         self.identifier = identifier 
-        print(identifier)
 
     def stealability(self):
         '''calculates the price divided by the weight  
